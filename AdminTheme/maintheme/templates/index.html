@@ -30,12 +30,23 @@
 	</script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<!-- Custom styles for this template-->
+
+	<style>
+		h1 { color: 	#1E90FF; }
+		div.a { color: 	#1E90FF; }
+	  </style>
+
+
 	< </head>
 
 <body id="page-top">
 
+	
+
 	<!-- Page Wrapper -->
 	<div id="wrapper">
+
+		
 
 		<!-- Sidebar -->
 		<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -43,34 +54,30 @@
 			<!-- Sidebar - Brand -->
 			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
 				<div class="sidebar-brand-icon rotate-n-15">
-					<i class="fas fa-laugh-wink"></i>
+					
 				</div>
-				<div class="sidebar-brand-text mx-3">CBIT Shruti Admin Panel</div>
+				<div class="sidebar-brand-text mx-3">Menu</div>
 			</a>
-
-			<!-- Divider -->
-			<hr class="sidebar-divider my-0">
-
-			<!-- Nav Item - Dashboard -->
-			<li class="nav-item active">
-				<a class="nav-link" href="index.html">
-					<i class="fas fa-fw fa-tachometer-alt"></i>
-					<span>Home Page</span></a>
-			</li>
 
 			<!-- Divider -->
 			<hr class="sidebar-divider">
 
-			<!-- Heading -->
-			<div class="sidebar-heading">
-				Interface
-			</div>
+			<!-- Nav Item - Dashboard -->
+			<li class="nav-item active">
+				<a class="nav-link" href="{% static 'index.html' %}">
+					<i class="fas fa-fw fa-tachometer-alt" style="font-size:15px;color:white"></i>
+					<span>Home Page</span></a>
+			</li>
+
+			
+
+			
 
 			<!-- Nav Item - Sports Collapse Menu -->
 			<li class="nav-item">
 				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
 					aria-expanded="true" aria-controls="collapseTwo">
-					<i class="fas fa-futbol"></i>
+					<i class="fas fa-futbol" style="font-size:15px;color:white"></i>
 					<span>Sports</span>
 				</a>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -85,12 +92,12 @@
 
 			<!-- Nav Item - Schedule Collapse Menu -->
 			<li class="nav-item">
-				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-					aria-expanded="true" aria-controls="collapseUtilities">
-					<i class="fas fa-fw fa-wrench"></i>
+				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSchedule"
+					aria-expanded="true" aria-controls="collapseSchedule">
+					<i class="fa fa-calendar" style="font-size:15px;color:white"></i>
 					<span>Schedule</span>
 				</a>
-				<div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+				<div id="collapseSchedule" class="collapse" aria-labelledby="headingSchedule"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<h6 class="collapse-header">Activities:</h6>
@@ -104,18 +111,19 @@
 
 			<!-- Nav Item - Registration Collapse Menu -->
 			<li class="nav-item">
-				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-					aria-expanded="true" aria-controls="collapseUtilities">
-					<i class="fas fa-fw fa-wrench"></i>
+				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRegistration"
+					aria-expanded="true" aria-controls="collapseRegistration">
+					<i class="fa fa-registered" style="font-size:15px;color:white"></i>
 					<span>Registration</span>
+					
 				</a>
-				<div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+				<div id="collapseRegistration" class="collapse" aria-labelledby="headingRegistration"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<h6 class="collapse-header">Custom Utilities:</h6>
-						<a class="collapse-item" href="utilities-color.html">Add Schedule</a>
-						<a class="collapse-item" href="utilities-border.html">Edit Schedule</a>
-						<a class="collapse-item" href="utilities-animation.html">View Schedule</a>
+						<h6 class="collapse-header">Activities:</h6>
+						<a class="collapse-item" href="utilities-color.html">Add Registration</a>
+						<a class="collapse-item" href="utilities-border.html">Edit Registration</a>
+						<a class="collapse-item" href="utilities-animation.html">View Registration</a>
 
 					</div>
 				</div>
@@ -145,6 +153,9 @@
 
 				<!-- Topbar -->
 				<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+					<h1>SHRUTI ADMIN PANEL</h1>
+					
 
 					<!-- Sidebar Toggle (Topbar) -->
 					<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -182,43 +193,29 @@
 
 
 
-
-
-
-
-
-
 						<!-- End of Topbar -->
 
 						<!-- Begin Page Content -->
 						<div class="container-fluid">
 
-
-
 							<!-- Content Row -->
 							<div class="row">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+								<div class="a">
+									<a href="#" class="btn btn-info btn-lg">
+										<span class="glyphicon	 glyphicon-log-out"></span> Log out
+									  </a>
+									</div>
+									<style>div.a {
+										text-align: right;
+									  }</style>
 
 
 								<!-- /.container-fluid -->
 
 							</div>
+
+							
 							<!-- End of Main Content -->
 
 							<!-- End of Footer -->
@@ -226,34 +223,35 @@
 						</div>
 						<!-- End of Content Wrapper -->
 
+							
+
 			</div>
 			<!-- End of Page Wrapper -->
 
-			<!-- Scroll to Top Button-->
-			<a class="scroll-to-top rounded" href="#page-top">
-				<i class="fas fa-angle-up"></i>
-			</a>
-
-			<!-- Logout Modal-->
-			<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-				aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-							<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">×</span>
-							</button>
-						</div>
-						<div class="modal-body">Select "Logout" below if you are ready to end your current session.
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-							<a class="btn btn-primary" href="login.html">Logout</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div class="w3-content w3-section" style="max-width:500px">
+				<img class="mySlides" src="{% static 'CricketPicture.jpg' %}" style="width: 1100px;height: 600px">
+				<img class="mySlides" src="{% static 'FootballPicture.jpg' %}" style="width: 1100px;height: 600px">
+				<img class="mySlides" src="{% static 'BasketballPicture.jpg' %}" style="width: 1100px;height: 600px">
+				
+				
+			  </div>
+			  
+			  <script>
+			  var myIndex = 0;
+			  carousel();
+			  
+			  function carousel() {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				for (i = 0; i < x.length; i++) {
+				  x[i].style.display = "none";  
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1}    
+				x[myIndex-1].style.display = "block";  
+				setTimeout(carousel, 2000); // Change image every 2 seconds
+			  }
+			  </script>
 
 			<!-- Bootstrap core JavaScript-->
 			<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
