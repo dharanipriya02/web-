@@ -36,40 +36,43 @@
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
+              <div>
               <img src="{% static 'cbitcampus.jpg' %}" alt="CBIT Campus Picture" style="width:550px ; height:450px;">
+            </div>
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Shruti Sports Admin</h1>
                   </div>
-                  <form action="{%url 'login' %}" method="post">
-                    {% csrf_token %}
+
+                  <form method="POST" id="myForm" action="{%url 'login'%}">
+                              {% csrf_token %}
+                  <div class="user">
+                    
+                    
+                     
+                  
                     <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="username"
-                        aria-describedby="emailHelp" placeholder="Enter Admin ID...">
+                      <input type="text" class="form-control form-control-user" id="username" name="username" placeholder="Enter Username...">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="Password"
-                        placeholder="Password" >
+                      <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small">
-                        <input type="checkbox" class="custom-control-input" id="customCheck">
+                        <input type="checkbox" name="remember" class="custom-control-input" id="customCheck" >
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
                     
-                        <div class ="form-group">
-                          <button class ="btn btn-primary " type="submit" value="submit">login</button>
-                        </div>
                     
-                    </form>
-                    
-
-
-
-                  </form>
-
+                    <center>
+                    <div class="form-group ">
+                   <button class="btn btn-primary " type="submit" value="submit" >Login</button>
+                  </div>
+                   </center> 
+                  </div>
+                </form>
 
 
                 </div>
