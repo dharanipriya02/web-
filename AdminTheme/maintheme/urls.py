@@ -9,7 +9,7 @@ urlpatterns = [
     
     path("add_sport",views.add_sport, name="add_sport"),
     path("edit_sport",views.edit_sport, name="edit_sport"),
-    path("view_sport",views.edit_sport, name="view_sport"),
+    path("view_sport",views.view_sport, name="view_sport"),
     
 
 ]

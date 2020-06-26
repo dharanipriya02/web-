@@ -1,0 +1,59 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block title%}
+View Sport
+{%endblock%}
+
+{%block main%}
+<div>
+<h3>Indoor</h3>
+<div>
+<h2>carrom</h2> 
+                      <ul class="list-group mb-3 px-2" style="overflow-y: scroll;height: 450px;">
+                       <li class="px-4 list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport_ID - {{carroms.sport_id}}</h6>
+                        </li>
+                        <li class="px-4 list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport_Name - {{carroms.sport_name}}</h6>
+                        </li>
+                        <li class="px-4 list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport_Category - {{carroms.sport_category}}</h6>
+                        </li>
+                        <li class="px-4 list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport_Min_num_ply - {{carroms.mini_team_size}}</h6>
+                        </li>
+                        <li class="px-4 list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport_Min_num_ply - {{carroms.max_team_size}}</h6>
+                        </li>
+                      </ul>  
+              
+</div>
+</div>
+
+
+<div>
+<h3>Outdoor</h3>
+<div>
+<h2>Football</h2> 
+                      <ul class="list-group mb-3 px-2" style="overflow-y: scroll;height: 450px;">
+                       <li class="px-4 list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport_ID - {{football.sport_id}}</h6>
+                        </li>
+                        <li class="px-4 list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport_Name - {{football.sport_name}}</h6>
+                        </li>
+                        <li class="px-4 list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport_Category - {{football.sport_category}}</h6>
+                        </li>
+                        <li class="px-4 list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport_Min_num_ply - {{football.mini_team_size}}</h6>
+                        </li>
+                        <li class="px-4 list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
+                              <h6 class="my-0 font-weight-bold">Sport_Min_num_ply - {{football.max_team_size}}</h6>
+                        </li>
+                      </ul>  
+              
+</div>
+
+</div>
+{%endblock%}
