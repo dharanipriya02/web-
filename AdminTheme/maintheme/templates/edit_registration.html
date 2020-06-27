@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block title%}
+EDIT REGISTRATION
+{%endblock%}
+
+{%block main%}
+<form method="POST" id="myForm" action="{%url 'edit_registration' %}">
+                              {% csrf_token %}
+                  <div class="user">
+                    
+                    
+            
+
+                  	<div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="team_name" placeholder="Enter team name...">
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <center>
+                    <div class="form-group ">
+                   <button class="btn btn-primary " type="submit" value="submit" >Accept Registration</button>
+                  </div>
+                   </center> 
+                  </div>
+                </form>
+                {%endblock%}

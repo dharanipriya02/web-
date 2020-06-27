@@ -6,15 +6,17 @@ View Sport
 
 {%block main%}
 <div class="container">
-  <form method="POST" id="myForm" action="{%url 'view_sport'%}">
+  <form method="POST" id="myForm" action="{%url 'view_registration'%}">
                               {% csrf_token %}
                   <div class="user">
                     
          
                     <div class="form-group">
-                      <input type="text" class="form-control form-control-user" name="sport_category" placeholder="Enter Sport category...">
+                      <input type="text" class="form-control form-control-user" name="sport_name" placeholder="Enter Sport Name...">
                     </div>
-                    
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-user" name="team_name" placeholder="Enter Team Name...">
+                      </div>
                     <center>
                     <div class="form-group ">
                    <button class="btn btn-primary " type="submit" value="submit" >View details</button>
@@ -28,28 +30,28 @@ View Sport
                   <ul class="list-group  " >
                        
                         <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
-                              <h6 class="my-0 font-weight-bold">Sport ID - {{i.sport_id}}</h6>
+                              <h6 class="my-0 font-weight-bold">Member_ID - {{i.member_ID}}</h6>
                         </li>
                         <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
                               <h6 class="my-0 font-weight-bold">Sport Name - {{i.sport_name}}</h6>
                         </li>
                         <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
-                              <h6 class="my-0 font-weight-bold">Sport category - {{i.sport_category}}</h6>
+                              <h6 class="my-0 font-weight-bold">Team ID - {{i.team_id}}</h6>
                         </li>
                         <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
-                              <h6 class="my-0 font-weight-bold">Minimum players in a team - {{i.mini_team_size}}</h6>
+                              <h6 class="my-0 font-weight-bold">Team name - {{i.team_name}}</h6>
                         </li>
                         <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
-                              <h6 class="my-0 font-weight-bold">Maximum players in a team - {{i.max_team_size}}</h6>
+                              <h6 class="my-0 font-weight-bold">Status - {{i.status}}</h6>
                         </li>
                         <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
-                              <h6 class="my-0 font-weight-bold">Gender - {{i.gender}}</h6>
+                              <h6 class="my-0 font-weight-bold">Player name - {{i.member_name}}</h6>
                         </li>
                         <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
-                              <h6 class="my-0 font-weight-bold">Starting from - {{i.start_date}}</h6>
+                              <h6 class="my-0 font-weight-bold">Section - {{i.section}}</h6>
                         </li>
                         <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
-                              <h6 class="my-0 font-weight-bold">To - {{i.end_date}}</h6>
+                              <h6 class="my-0 font-weight-bold">Branch - {{i.branch}}</h6>
                         </li>
                         <li class=" list-group-item d-flex justify-content-between lh-condensed" style="padding-top: 12px;padding-bottom: 0;">
                               <h6 class="my-0 font-weight-bold">Gender - {{i.gender}}</h6>

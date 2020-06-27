@@ -1,0 +1,54 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block title%}
+ADD SCHEDULE
+{%endblock%}
+
+{%block main%}
+<form method="POST" id="myForm" action="{%url 'add_schedule'%}">
+                              {% csrf_token %}
+                  <div class="user">
+                    
+                    
+            
+
+ 					<div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="sport_name" placeholder="Enter Sport name...">
+                    </div>
+                  	<div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="team1_id" placeholder="Enter team 1 Id...">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="team2_id" placeholder="Enter team 2 id...">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="match_date" placeholder="Enter match date...">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="match_title" placeholder="Enter match title...">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="start_time" placeholder="Enter start time">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="reporting_time" placeholder="Enter reporting time">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-user" name="branch1" placeholder="Enter branch1">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control form-control-user" name="branch2" placeholder="Enter branch2">
+                      </div>
+
+                    
+                    
+                    
+                    
+                    <center>
+                    <div class="form-group ">
+                   <button class="btn btn-primary " type="submit" value="submit" >Add Sport</button>
+                  </div>
+                   </center> 
+                  </div>
+                </form>
+                {%endblock%}

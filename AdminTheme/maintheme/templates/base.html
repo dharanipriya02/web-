@@ -84,7 +84,7 @@
 					<div class="bg-white py-2 collapse-inner rounded">
 						<h6 class="collapse-header">Activities:</h6>
 						<a class="collapse-item" href="{% url 'add_sport' %}">Add Sport</a>
-						<a class="collapse-item" href="cards.html">Edit Sport</a>
+						<a class="collapse-item" href="{% url 'edit_sport' %}">Edit Sport</a>
 						<a class="collapse-item" href="{% url 'view_sport' %}">View Sport</a>
 					</div>
 				</div>
@@ -101,9 +101,9 @@
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<h6 class="collapse-header">Activities:</h6>
-						<a class="collapse-item" href="utilities-color.html">Add Schedule</a>
-						<a class="collapse-item" href="utilities-border.html">Edit Schedule</a>
-						<a class="collapse-item" href="utilities-animation.html">View Schedule</a>
+						<a class="collapse-item" href="{% url 'add_schedule' %}">Add Schedule</a>
+						<a class="collapse-item" href="{% url 'edit_schedule' %}">Edit Schedule</a>
+						<a class="collapse-item" href="{% url 'view_schedule' %}">View Schedule</a>
 
 					</div>
 				</div>
@@ -121,9 +121,9 @@
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<h6 class="collapse-header">Activities:</h6>
-						<a class="collapse-item" href="utilities-color.html">Add Registration</a>
-						<a class="collapse-item" href="utilities-border.html">Edit Registration</a>
-						<a class="collapse-item" href="utilities-animation.html">View Registration</a>
+						<a class="collapse-item" href="{% url 'add_registration' %}">View registered teams</a>
+						<a class="collapse-item" href="{% url 'edit_registration' %}">Edit Registration</a>
+						<a class="collapse-item" href="{% url 'view_registration' %}">View Team players</a>
 
 					</div>
 				</div>
@@ -149,70 +149,48 @@
 		<div id="content-wrapper" class="d-flex flex-column">
 
 			<!-- Main Content -->
-			<div id="content">
+			<div id="content p-0">
 
 				<!-- Topbar -->
-				<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+				<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow pb-2">
 
-					<h1>SHRUTI ADMIN PANEL</h1>
-					
+					<div class="navbar-header">
+						<h1 class=" px-2  text-primary">SHRUTI ADMIN PANEL</h1>
+					</div>
 
 					<!-- Sidebar Toggle (Topbar) -->
-					<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-						<i class="fa fa-bars"></i>
-					</button>
+					
+                                 <div class="">
+									<a href="{% url 'login' %}" class="btn bg-primary btn-info btn-lg ">
+										<span class="glyphicon	 glyphicon-log-out"></span> Log out
+									  </a>
+									</div>
+									
 
-
+                   </nav>
 
 					<!-- Topbar Navbar -->
-					<ul class="navbar-nav ml-auto">
-
+					
+</div>
 						<!-- Nav Item - Search Dropdown (Visible Only XS) -->
-						<li class="nav-item dropdown no-arrow d-sm-none">
-							<a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="fas fa-search fa-fw"></i>
-							</a>
-							<!-- Dropdown - Messages -->
-							<div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-								aria-labelledby="searchDropdown">
-								<form class="form-inline mr-auto w-100 navbar-search">
-									<div class="input-group">
-										<input type="text" class="form-control bg-light border-0 small"
-											placeholder="Search for..." aria-label="Search"
-											aria-describedby="basic-addon2">
-										<div class="input-group-append">
-											<button class="btn btn-primary" type="button">
-												<i class="fas fa-search fa-sm"></i>
-											</button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</li>
+						
 
 
 
 						<!-- End of Topbar -->
 
 						<!-- Begin Page Content -->
-						<div class="container-fluid">
+						<div class="container-fluid mt-0">
 
 							<!-- Content Row -->
 							<div class="row">
-
-								<div class="a">
-									<a href="#" class="btn btn-info btn-lg">
-										<span class="glyphicon	 glyphicon-log-out"></span> Log out
-									  </a>
-									</div>
-									<style>div.a {
-										text-align: right;
-									  }</style>
-
+							 <div class="col-xl-10 col-lg-12 col-md-9 mt-4">
+								{% block main%}
+								{% endblock%}
+			
 
 								<!-- /.container-fluid -->
-
+								</div>
 							</div>
 
 							
@@ -222,14 +200,14 @@
 
 						</div>
 						<!-- End of Content Wrapper -->
-
-							
+				
 
 			</div>
 			<!-- End of Page Wrapper -->
-{% block main%}
-{% endblock%}
-			
+
+			</div>
+
+	
 
 			<!-- Bootstrap core JavaScript-->
 			<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
