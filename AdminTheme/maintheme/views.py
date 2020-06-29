@@ -95,10 +95,12 @@ def add_schedule(request) :
          match_title=request.POST.get('match_title')
          start_time=request.POST.get('start_time') 
          reporting_time=request.POST.get('reporting_time') 
-         branch1=request.POST.get('branch1') 
-         branch2=request.POST.get('branch2') 
+         team1=request.POST.get('team1') 
+         team2=request.POST.get('team2') 
+         venue=request.POST.get('venue') 
 
-         a = requests.post('https://group-10-api.herokuapp.com/add_schedule',headers={'Authorization':f'Bearer {p}'},data={'sport_name':sport_name,'team1_id':team1_id,'team2_id':team2_id,'match_date':match_date,'match_title':match_title,'start_time':start_time,'reporting_time':reporting_time,'branch1':branch1,'branch2':branch2})
+
+         a = requests.post('https://group-10-api.herokuapp.com/add_schedule',headers={'Authorization':f'Bearer {p}'},data={'sport_name':sport_name,'team1_id':team1_id,'team2_id':team2_id,'match_date':match_date,'match_title':match_title,'start_time':start_time,'reporting_time':reporting_time,'team1':team1,'team2':team2,'venue':venue})
          print(a)
          return render(request,'add_schedule.html')
     else:
@@ -118,10 +120,11 @@ def edit_schedule(request):
          start_time=request.POST.get('start_time') 
 
          reporting_time=request.POST.get('reporting_time') 
-      #   branch1=request.POST.get('branch1') 
-       #  branch2=request.POST.get('branch2') 
+         team1=request.POST.get('team1') 
+         team2=request.POST.get('team2') 
+         venue=request.POST.get('venue') 
 
-         a = requests.post('https://group-10-api.herokuapp.com/Modify_schedule',headers={'Authorization':f'Bearer {p}'},data={'team1_id':team1_id,'team2_id':team2_id,'match_date':match_date,'match_title':match_title,'start_time':start_time,'reporting_time':reporting_time})
+         a = requests.post('https://group-10-api.herokuapp.com/Modify_schedule',headers={'Authorization':f'Bearer {p}'},data={'team1_id':team1_id,'team2_id':team2_id,'match_date':match_date,'match_title':match_title,'start_time':start_time,'reporting_time':reporting_time,'team1':team1,'team2':team2,'venue':venue})
          print(a)
          return render(request,'edit_schedule.html')
     else:
